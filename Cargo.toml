@@ -1,0 +1,51 @@
+[workspace]
+resolver = "3"
+
+members = [
+    "crates/core",
+    "crates/api",
+    "crates/resolver",
+    "crates/transaction",
+    "crates/database",
+    "crates/downloader",
+    "crates/repository",
+    "crates/installer",
+    "crates/platform",
+    "crates/backends/pacman",
+    "crates/backends/aur",
+    "crates/backends/apt",
+    "crates/backends/github",
+    "crates/backends/flatpak",
+    "crates/backends/dnf",
+    "crates/backends/snap",
+    "apps/cli",
+    "apps/daemon",
+]
+
+default-members = ["apps/cli"]
+
+[workspace.package]
+version = "1.0.0-dev"
+edition = "2024"
+license = "GPL-3.0-or-later"
+rust-version = "1.99"
+
+[workspace.dependencies]
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+async-trait = "0.1"
+anyhow = "1"
+thiserror = "2"
+tracing = "0.1"
+reqwest = { version = "0.13", features = ["json", "stream"] }
+clap = { version = "4", features = ["derive"] }
+alpm = "5.0.2"
+indicatif = "0.18.6"
+rusqlite = "0.41.0"
+sha2 = "0.11.1"
+toml = "1.1.8"
+
+lumo-core = { path = "crates/core" }
+lumo-api = { path = "crates/api" }
+lumo-pacman = { path = "crates/backends/pacman" }

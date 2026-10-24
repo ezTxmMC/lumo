@@ -1,0 +1,15 @@
+[package]
+name = "lumo-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+lumo-api.workspace = true
+lumo-pacman.workspace = true
+tokio.workspace = true
+
+[[bin]]
+name = "lumo"
+path = "src/main.rs"

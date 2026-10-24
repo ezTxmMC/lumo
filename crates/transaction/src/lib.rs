@@ -1,0 +1,1 @@
+//! Coordinate install workflows

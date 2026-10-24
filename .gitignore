@@ -1,0 +1,21 @@
+# Build output
+/target
+**/*.rs.bk
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Editors and IDEs
+.idea/
+.vscode/
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
