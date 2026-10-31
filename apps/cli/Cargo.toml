@@ -7,7 +7,14 @@ license.workspace = true
 [dependencies]
 anyhow.workspace = true
 lumo-api.workspace = true
+lumo-core.workspace = true
+lumo-apt.workspace = true
+lumo-aur.workspace = true
+lumo-dnf.workspace = true
+lumo-flatpak.workspace = true
+lumo-github.workspace = true
 lumo-pacman.workspace = true
+lumo-snap.workspace = true
 tokio.workspace = true
 
 [[bin]]
